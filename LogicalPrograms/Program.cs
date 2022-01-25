@@ -3,4 +3,5 @@ using LogicalPrograms;
 Console.WriteLine("Hello, World!");
 //FibonacciSeries series = new FibonacciSeries();
 //series.findFibonacciSeries();
-Perfect.PerfectNumbers();
+//Perfect.PerfectNumbers();
+Prime.PrimeNumbers();

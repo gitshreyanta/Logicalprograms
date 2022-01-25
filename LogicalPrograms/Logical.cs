@@ -4,39 +4,32 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    class Perfect
+    class Prime
     {
-        public static void PerfectNumbers()
+        public static void PrimeNumbers()
         {
-            int num, i, sumOffact = 0;
+            Console.WriteLine("Enter the Numbers : ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            bool flag = false;
 
-            Console.WriteLine("Enter the number : ");
-            num = Convert.ToInt32(Console.ReadLine());
-            for (i = 1; i <= num / 2; i++)
+            for (int i = 2; i < num; i++)
             {
 
                 if (num % i == 0)
-                    sumOffact = sumOffact + i;
+                {
+                    flag = true;
+                }
             }
 
-            if (sumOffact == num)
+            if (flag)
             {
-                Console.WriteLine("Given number is perfect : " + num);
+                Console.WriteLine("Number is not prime");
             }
             else
             {
-                Console.WriteLine("Given number is not perfect : " + num);
+                Console.WriteLine("Number is a prime");
             }
-
         }
 
     }
 }
-
-
-
-
-
-
-
-
