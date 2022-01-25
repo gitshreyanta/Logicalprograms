@@ -4,32 +4,20 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    class Prime
+    class Reserve
     {
-        public static void PrimeNumbers()
+        public static void ReserveNumbers()
         {
-            Console.WriteLine("Enter the Numbers : ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            bool flag = false;
-
-            for (int i = 2; i < num; i++)
+            int n, reverse = 0, rem;
+            Console.Write("Enter a number: ");
+            n = int.Parse(Console.ReadLine());
+            while (n != 0)
             {
-
-                if (num % i == 0)
-                {
-                    flag = true;
-                }
+                rem = n % 10;
+                reverse = reverse * 10 + rem;
+                n /= 10;
             }
-
-            if (flag)
-            {
-                Console.WriteLine("Number is not prime");
-            }
-            else
-            {
-                Console.WriteLine("Number is a prime");
-            }
+            Console.Write("Reversed Number: " + reverse);
         }
-
     }
 }

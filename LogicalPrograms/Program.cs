@@ -4,4 +4,5 @@ Console.WriteLine("Hello, World!");
 //FibonacciSeries series = new FibonacciSeries();
 //series.findFibonacciSeries();
 //Perfect.PerfectNumbers();
-Prime.PrimeNumbers();
+//Prime.PrimeNumbers();
+Reserve.ReserveNumbers();
