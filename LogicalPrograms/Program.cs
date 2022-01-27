@@ -8,5 +8,6 @@ Console.WriteLine("Hello, World!");
 //Reserve.ReserveNumbers();
 //CouponNumbers couponNumbers = new CouponNumbers();
 //couponNumbers.Coupon();
-DemoStopwatch stopwatch = new DemoStopwatch();
-stopwatch.Watch();
+//DemoStopwatch stopwatch = new DemoStopwatch();
+//stopwatch.Watch();
+//dayweek.days();
