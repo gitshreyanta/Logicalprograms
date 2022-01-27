@@ -4,20 +4,25 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    class Reserve
+    class CouponNumbers
     {
-        public static void ReserveNumbers()
+        public void Coupon()
         {
-            int n, reverse = 0, rem;
-            Console.Write("Enter a number: ");
-            n = int.Parse(Console.ReadLine());
-            while (n != 0)
+            //assign numbers and characters
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Console.WriteLine("Please Enter the number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            var chars = new char[num];
+            var Random = new Random();
+
+            //Loop to generate the random coupon
+            for (int i = 0; i < chars.Length; i++)
             {
-                rem = n % 10;
-                reverse = reverse * 10 + rem;
-                n /= 10;
+                chars[i] = characters[Random.Next(characters.Length)];
             }
-            Console.Write("Reversed Number: " + reverse);
+            var finalstring = new string(chars);
+            // To print the generate coupon
+            Console.WriteLine(finalstring);
         }
     }
 }

@@ -5,4 +5,6 @@ Console.WriteLine("Hello, World!");
 //series.findFibonacciSeries();
 //Perfect.PerfectNumbers();
 //Prime.PrimeNumbers();
-Reserve.ReserveNumbers();
+//Reserve.ReserveNumbers();
+CouponNumbers couponNumbers = new CouponNumbers();
+couponNumbers.Coupon();
