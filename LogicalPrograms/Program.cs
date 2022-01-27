@@ -11,3 +11,4 @@ Console.WriteLine("Hello, World!");
 //DemoStopwatch stopwatch = new DemoStopwatch();
 //stopwatch.Watch();
 //dayweek.days();
+Temperatureconversion.Temp();
