@@ -1,28 +1,35 @@
 ﻿using System;
+using System.Threading;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace LogicalPrograms
 {
-    class CouponNumbers
+    class DemoStopwatch
     {
-        public void Coupon()
+        public void Watch()
         {
-            //assign numbers and characters
-            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            Console.WriteLine("Please Enter the number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            var chars = new char[num];
-            var Random = new Random();
+            // Create new stopwatch obj 
+            Stopwatch stopwatch = new Stopwatch();
 
-            //Loop to generate the random coupon
-            for (int i = 0; i < chars.Length; i++)
-            {
-                chars[i] = characters[Random.Next(characters.Length)];
-            }
-            var finalstring = new string(chars);
-            // To print the generate coupon
-            Console.WriteLine(finalstring);
+
+            Console.WriteLine("click to start the watch");
+            Console.ReadLine();
+
+            // Start stopwatch time
+            stopwatch.Start();
+
+
+            Console.WriteLine("click to stop the watch");
+            Console.ReadLine();
+
+            // Stop time
+            stopwatch.Stop();
+
+            // Print the total Elapsed time
+            Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
         }
     }
 }
