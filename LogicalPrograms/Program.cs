@@ -12,4 +12,5 @@ Console.WriteLine("Hello, World!");
 //stopwatch.Watch();
 //dayweek.days();
 //Temperatureconversion.Temp();
-SqrtNewtonMethod.SqrtMethod();
+//SqrtNewtonMethod.SqrtMethod();
+CompountInterst.intesrest();

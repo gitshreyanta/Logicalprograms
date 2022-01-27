@@ -4,24 +4,24 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    internal class SqrtNewtonMethod
+    public class CompountInterst
     {
-        public static void SqrtMethod()
+
+        public static void intesrest()
         {
-            Console.WriteLine("Enter the number:");
+            Console.WriteLine("Enter the principle amount:");
+            double principle = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the number of years");
+            int yrs = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the rate of interest ");
+            double rate = Convert.ToDouble(Console.ReadLine());
+            double payment = 0;
+            int n = 12 * yrs;
+            double r = rate / (12 * 100);
+            payment = (principle * r) / (1 - Math.Pow((1 + r), -n));
 
-            double c = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Payment is: " + payment);
 
-            double epsilon = 1e-15;    // relative error tolerance
-            double t = c;              // estimate of the square root of c
-
-            // repeatedly apply Newton update step until desired precision is achieved
-            while (Math.Abs(t - c / t) > epsilon * t)
-            {
-                t = (c / t + t) / 2.0;
-            }
-            // print out the estimate of the square root of c
-            Console.WriteLine(t);
         }
     }
 }
