@@ -11,4 +11,5 @@ Console.WriteLine("Hello, World!");
 //DemoStopwatch stopwatch = new DemoStopwatch();
 //stopwatch.Watch();
 //dayweek.days();
-Temperatureconversion.Temp();
+//Temperatureconversion.Temp();
+SqrtNewtonMethod.SqrtMethod();

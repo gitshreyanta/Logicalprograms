@@ -4,31 +4,24 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    public class Temperatureconversion
+    internal class SqrtNewtonMethod
     {
-        public static void Temp()
+        public static void SqrtMethod()
         {
+            Console.WriteLine("Enter the number:");
 
-            double fahrenheit;
-            double celsius;
-            Console.WriteLine("Enter the Temperature");
-            double temp = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Ebter the unit to Convert: C for celcius or F for Fahrenheit");
-            string convert_var = Console.ReadLine();
+            double c = Convert.ToDouble(Console.ReadLine());
 
-            if (convert_var == "C")
+            double epsilon = 1e-15;    // relative error tolerance
+            double t = c;              // estimate of the square root of c
+
+            // repeatedly apply Newton update step until desired precision is achieved
+            while (Math.Abs(t - c / t) > epsilon * t)
             {
-                celsius = ((temp - 32) * 5) / 9;
-                Console.WriteLine(+temp + " Fahrenheit: " + celsius + " Celsius");
-
+                t = (c / t + t) / 2.0;
             }
-            else if (convert_var == "F")
-            {
-                fahrenheit = (temp * 9) / 5 + 32;
-                Console.WriteLine(+temp + " Celsius : " + fahrenheit + " fahrenheit");
-            }
-
-
+            // print out the estimate of the square root of c
+            Console.WriteLine(t);
         }
     }
 }
