@@ -13,4 +13,5 @@ Console.WriteLine("Hello, World!");
 //dayweek.days();
 //Temperatureconversion.Temp();
 //SqrtNewtonMethod.SqrtMethod();
-CompountInterst.intesrest();
+//CompountInterst.intesrest();
+deciToBinary.Binary();

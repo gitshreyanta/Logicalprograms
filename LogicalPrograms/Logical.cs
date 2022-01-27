@@ -4,24 +4,29 @@ using System.Text;
 
 namespace LogicalPrograms
 {
-    public class CompountInterst
+    internal class deciToBinary
     {
-
-        public static void intesrest()
+        public static void Binary()
         {
-            Console.WriteLine("Enter the principle amount:");
-            double principle = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the number of years");
-            int yrs = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the rate of interest ");
-            double rate = Convert.ToDouble(Console.ReadLine());
-            double payment = 0;
-            int n = 12 * yrs;
-            double r = rate / (12 * 100);
-            payment = (principle * r) / (1 - Math.Pow((1 + r), -n));
+            Console.WriteLine("ENter the decimal value");
+            int deciVal = Convert.ToInt32(Console.ReadLine());
+            int val;
+            string a = "";
 
-            Console.WriteLine("Payment is: " + payment);
-
+            Console.WriteLine("Decimal: {0}", deciVal);
+            while (deciVal >= 1)
+            {
+                val = deciVal / 2;
+                a += (deciVal % 2).ToString();
+                deciVal = val;
+            }
+            string binValue = "";
+            for (int i = a.Length - 1; i >= 0; i--)
+            {
+                binValue = binValue + a[i];
+            }
+            Console.WriteLine("Binary: {0}", binValue);
         }
     }
 }
+
